@@ -54,6 +54,9 @@ _3 + 1 Steps to run GraphKer Tool_
        You can create databases in whatever version you want (latest version preferable) through GUI or Neo4j Terminal.
        - Create a new database in GUI: Just click the (+), set DB Name, Username and Password. Useful Tutorial: https://www.sqlshack.com/getting-started-with-the-neo4j-graph-database/
        - Through Neo4j Shell: https://neo4j.com/docs/cypher-manual/current/databases/
+
+       这里的配置方法是Neo4j v4版本的配置，v5版本需要将APOC配置内容写在单独的“apoc.conf”文件内。另外运行该项目可能会报没有“apoc.cypher.runSchemaFile”的错误。所以最好用v4版本运行。
+       
      - Linux Users: When you start neo4j through systemctl, type ``` cypher-shell ```, then ``` create database NAME; ```. Now you have to set this database, as default so when you start neo4j you start automatically this database. Go to /etc/neo4j/neo4j.conf and uncomment ``` dbms.default_database=neo4j ``` and change it with your new database name. Restart neo4j service and you are ready. 
    - Configure Database:
      - Install APOC Plugin:
